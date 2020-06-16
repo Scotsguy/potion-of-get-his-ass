@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.github.scotsguy.potionofgethisass.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BrewingRecipeRegistryInvoker",
+    "MobEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

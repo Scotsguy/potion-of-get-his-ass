@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "potion-of-get-his-ass",
+  "version": "${version}",
+  "name": "Potion of Get His Ass",
+  "description": "Adds a potion that causes mobs to attack the user.",
+  "authors": [
+    "AppleTheGolden"
+  ],
+  "license": "MIT",
+  "icon": "assets/potion_of_get_his_ass/textures/mob_effect/hunted.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.scotsguy.potionofgethisass.PotionOfGetHisAss"
+    ]
+  },
+  "mixins": [
+    "potion-of-get-his-ass.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.8.0",
+    "minecraft": ">=1.16-",
+    "fabric": "*"
+  }
+}
