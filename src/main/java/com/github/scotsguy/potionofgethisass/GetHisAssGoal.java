@@ -11,14 +11,14 @@ import net.minecraft.entity.mob.MobEntity;
 // by TheBrokenRail, MIT licensed.
 
 public class GetHisAssGoal extends FollowTargetGoal<LivingEntity> {
-    public GetHisAssGoal(MobEntity mob) {
-        super(mob, LivingEntity.class, 10, false, false,
-                entity -> entity.getActiveStatusEffects().containsKey(PotionOfGetHisAss.HUNTED)
-                        && !mob.getActiveStatusEffects().containsKey(PotionOfGetHisAss.HUNTED)
-                        && !ignoresHunted(entity));
+    public GetHisAssGoal(MobEntity hunter) {
+        super(hunter, LivingEntity.class, 10, false, false,
+                huntee -> huntee.getActiveStatusEffects().containsKey(PotionOfGetHisAss.HUNTED)
+                        && !hunter.getActiveStatusEffects().containsKey(PotionOfGetHisAss.HUNTED)
+                        && !ignoresBeingHunted(huntee));
     }
 
-    private static boolean ignoresHunted(LivingEntity entity) {
+    private static boolean ignoresBeingHunted(LivingEntity entity) {
         return entity instanceof WitherEntity
                 || entity instanceof EnderDragonEntity
                 || entity instanceof ElderGuardianEntity
