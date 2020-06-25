@@ -27,7 +27,7 @@
     "modupdater": {
       "strategy": "github",
       "owner": "Scotsguy",
-      "repo": "potion-of-get-his-ass"
+      "repository": "potion-of-get-his-ass"
     }
   }
 }
