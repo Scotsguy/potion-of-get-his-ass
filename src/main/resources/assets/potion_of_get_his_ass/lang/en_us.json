@@ -8,5 +8,9 @@
   "item.minecraft.potion.effect.long_hunted": "Potion of Hunting",
 
   "item.minecraft.splash_potion.effect.hunted": "Splash Potion of Hunting",
-  "item.minecraft.splash_potion.effect.long_hunted": "Splash Potion of Hunting"
+  "item.minecraft.splash_potion.effect.long_hunted": "Splash Potion of Hunting",
+
+  "item.minecraft.tipped_arrow.effect.hunted": "Arrow of Hunting",
+  "item.minecraft.tipped_arrow.effect.long_hunted": "Arrow of Hunting"
+
 }
