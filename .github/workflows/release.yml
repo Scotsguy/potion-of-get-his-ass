@@ -1,10 +1,9 @@
 on:
   push:
-    tags-ignore:
+    tags:
       - 'v*'
-  pull_request:
 
-name: Build Mod
+name: Release Mod
 
 jobs:
   build:
@@ -14,12 +13,17 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - run: echo ${{ github.ref }}
       - name: Build
         uses: eskatos/gradle-command-action@v1.3.2
         with:
           gradle-version: wrapper
           arguments: check build --stacktrace
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: ${{ success() }}
         with:
-          path: build/libs/*.jar
+          files: build/libs/*.jar
+          fail_on_unmatched_files: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
